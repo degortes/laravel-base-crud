@@ -49,10 +49,15 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $data = [
-            'details' => Product::find($id)
-        ];
-        return view('products.show', $data);
+        $details = Product::find($id);
+        if ($details) {
+            $data = [
+                'details' => $details
+            ];
+            return view('products.show', $data);
+        }
+        abort(404);
+
     }
 
     /**
