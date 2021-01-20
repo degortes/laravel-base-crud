@@ -1,12 +1,5 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 @section('content')
-    <header>
-        <h1>Boolando2</h1>
-    </header>
-    <section>
-        <div class="card-wrapper">
-
-        </div>
-    </section>
+        <h1>Home page</h1>
 @endsection
