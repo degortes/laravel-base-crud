@@ -9,7 +9,7 @@
                     <li class="nav-item active">
                         <a class=" {{Request::route()->getName() == 'home'? 'nav-link activenav' : 'nav-link' }} " href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class=" {{Request::route()->getName() == 'products.index'? 'nav-link activenav' : 'nav-link' }}" href="{{route('products.index')}}">Prodotti</a>
                     </li>
                 </ul>

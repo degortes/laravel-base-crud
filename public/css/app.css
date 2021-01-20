@@ -10952,11 +10952,19 @@ h1 {
 
 .activenav {
   background-color: red;
-  color: yellow;
 }
 
 .flexevl {
   display: flex;
   justify-content: space-evenly;
+}
+
+.imgbkg {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: red;
+  height: 500px;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.real.discount%2Fwp-content%2Fuploads%2F2019%2F03%2Fecommerce.png&f=1&nofb=1");
 }
 
