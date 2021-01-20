@@ -1,18 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-    <header>
+    <section>
         <h2>index</h2>
         <h1>Prodotti</h1>
-    </header>
-    <section>
         <div class="card-wrapper">
             @foreach ($products as $prodotto)
-                <h1> {{$prodotto->name}} </h1>
-                <p> {{$prodotto->color}} </p>
-                <p> {{$prodotto->size}} </p>
-                <p> {{$prodotto->price}} </p>
-                <p> {{$prodotto->brand}} </p>
+                <a href="{{route('products.show' , ['product' => $prodotto->id ] )}}">
+                    <div class="card">
+                        <h1> {{$prodotto->name}} </h1>
+                        <p> {{$prodotto->color}} </p>
+                    </div>
+                </a>
             @endforeach
 
         </div>
