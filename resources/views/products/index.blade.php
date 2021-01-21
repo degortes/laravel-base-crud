@@ -22,8 +22,10 @@
                     <td><a href="{{route('products.show' , ['product' => $prodotto->id ] )}}" class="btn btn-primary">Vedi Dettagli</a></td>
                 </tr>
                 @endforeach
-                <a href="{{route('products.create')}}" class="btn btn-primary">Aggiungi prodotto</a>
 
             </tbody>
         </table>
+        <div class="text-center">
+            <a href="{{route('products.create')}}" class="btn btn-primary">Aggiungi prodotto</a>
+        </div>
 @endsection

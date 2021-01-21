@@ -6,30 +6,29 @@
         <div class="form-row">
             <div class="form-group col-12">
                 <label>Nome</label>
-                <input type="text" name="name" class="form-control">
+                <input type="text" name="name" class="form-control" required>
             </div>
             <div class="form-group col-12">
                 <label >Colore</label>
-                <input name="color" type="text" class="form-control"  >
+                <input name="color" type="text" class="form-control" required >
             </div>
         </div>
         <div class="form-group">
             <label>Prezzo</label>
-            <input name="price" type="text" class="form-control" >
+            <input name="price" type="number" class="form-control" required>
         </div>
         <div class="form-row">
             <div class="form-group col-12">
                 <label>Brand</label>
-                <input name="brand"type="text" class="form-control" >
+                <input name="brand"type="text" class="form-control" required>
             </div>
             <div class="form-group col-12">
                 <label>Taglia</label>
-                <select name="size" class="form-control">
-                    <option selected>Scegli la taglia</option>
+                <select name="size" class="form-control" required>
+                    <option value="M">M</option>
                     <option value="XXS">XXS</option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
-                    <option value="M">M</option>
                     <option value="L">L</option>
                     <option value="XL">XL</option>
                     <option value="XXL">XXL</option>
