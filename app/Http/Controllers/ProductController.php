@@ -53,12 +53,11 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $details)
+    public function show(Product $product)
     {
-        dd($details);
-        if ($details) {
+        if ($product) {
             $data = [
-                'details' => $details
+                'details' => $product
             ];
             return view('products.show', $data);
         }
