@@ -3,17 +3,27 @@
 @section('content')
     <section>
         <h1>Prodotti</h1>
-        <div class="card-wrapper flexevl">
-            @foreach ($products as $prodotto)
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.shareicon.net%2Fdata%2F2016%2F10%2F20%2F846458_blue_512x512.png&f=1&nofb=1" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$prodotto->name}}</h5>
-                        <p class="card-text">{{$prodotto->color}}</p>
-                        <a href="{{route('products.show' , ['product' => $prodotto->id ] )}}" class="btn btn-primary">Vedi Dettagli</a>
-                    </div>
-                </div>
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">colore</th>
+                    <th scope="col">taglia</th>
+                    <th scope="col">prezzo</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($products as $prodotto)
+                <tr>
+                    <th scope="row">{{$prodotto->name}}</th>
+                    <td>{{$prodotto->color}}</td>
+                    <td>{{$prodotto->size}}</td>
+                    <td>{{$prodotto->price}}</td>
+                    <td><a href="{{route('products.show' , ['product' => $prodotto->id ] )}}" class="btn btn-primary">Vedi Dettagli</a></td>
+                </tr>
+                @endforeach
+                <a href="{{route('products.create')}}" class="btn btn-primary">Aggiungi prodotto</a>
 
-            @endforeach
-        </div>
+            </tbody>
+        </table>
 @endsection

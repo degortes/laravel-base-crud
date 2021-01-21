@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
@@ -38,7 +38,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input_data = $request->all();
+        $add_product = new Product;
+        $add_product->fill($input_data);
+        $add_product->save();
+
+        return redirect()->route('products.index');
+
     }
 
     /**
@@ -47,9 +53,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $details)
     {
-        $details = Product::find($id);
+        dd($details);
         if ($details) {
             $data = [
                 'details' => $details

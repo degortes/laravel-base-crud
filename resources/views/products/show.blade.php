@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="card text-center ">
         <div class="card-header">
             {{$details->brand}} offre numerosi vantaggi!
