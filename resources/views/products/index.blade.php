@@ -20,6 +20,14 @@
                     <td>{{$prodotto->size}}</td>
                     <td>{{$prodotto->price}}</td>
                     <td><a href="{{route('products.show' , ['product' => $prodotto->id ] )}}" class="btn btn-primary">Vedi Dettagli</a></td>
+                    <td><a href="{{route('products.edit' , ['product' => $prodotto->id ] )}}" class="btn btn-warning">Modifica</a></td>
+                    <td>
+                        <form action="{{route('products.destroy' , ['product' => $prodotto->id ] )}}" method="post">
+                            <button type="submit" name="button" class="btn btn-danger">Elimina</button>
+                            @csrf
+                            @method('DELETE')
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
 
